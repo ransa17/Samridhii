@@ -14,23 +14,12 @@ interface LogoStripProps {
 
 const LogoStrip: React.FC<LogoStripProps> = ({ logos }) => {
   return (
-    <section className="w-full bg-[#ffffff] py-12 px-4 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)]">
-      
-      <div
-        className="
-          max-w-7xl mx-auto
-          grid
-          grid-cols-2
-          sm:grid-cols-3
-          lg:flex lg:justify-between lg:items-center
-          gap-y-6 gap-x-6
-        "
-      >
+    <section className="w-full bg-[#E9EDF1] py-5 px-4">
+      <div className="max-w-7xl h-30 mx-auto flex items-center justify-center gap-10 md:gap-14 lg:gap-16 flex-wrap md:flex-nowrap">
         {logos.map((logo, index) => (
           <LogoItem key={index} src={logo.src} alt={logo.alt} />
         ))}
       </div>
-
     </section>
   );
 };

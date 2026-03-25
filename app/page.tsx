@@ -7,6 +7,7 @@ import CreditHero from "@/components/CreditHero";
 import Footer from "@/components/footer/Footer";
 import Hero from "@/components/hero/Hero";
 import InfoStrip from "@/components/InfoStrip";
+import Navbar from "@/components/layout/Navbar";
 import { logos } from "@/components/logos/Logos";
 import LogoStrip from "@/components/logos/LogoStrip";
 import Ticker from "@/components/Ticker";
@@ -16,7 +17,7 @@ import ImpactSection from "@/components/ImpactSection/ImpactSection";
 import ScaleStatsSection from "@/components/ScaleStatsSection";
 import Problem from "@/components/challenge/Problem";
 import Solution from "@/components/solution/solution";
-import WhyPartner from "@/components/whyPartner/whypartner";
+import WhyPartner from "@/components/whypartner/whypartner";
 
 
 export default function Home() {
@@ -37,6 +38,7 @@ export default function Home() {
 
   return (
     <div className="relative">
+     <Navbar activeItem="Home" />
       <Hero />
       <Ticker />
       <CreditHero />
@@ -57,7 +59,9 @@ export default function Home() {
       <LogoStrip logos={logos} />
       <InfoStrip />
       <TrustSection />
-   
+      <Footer />
+
+      {/* Scroll To Top Button */}
       <button
   onClick={scrollToTop}
   className={`fixed bottom-6 right-6 z-50 flex items-center gap-1 px-3 py-1.5 bg-white/90 backdrop-blur border border-gray-300 rounded-full shadow-md hover:shadow-lg transition cursor-pointer text-sm font-medium text-blue-700 ${
