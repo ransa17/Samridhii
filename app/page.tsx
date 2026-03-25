@@ -18,6 +18,7 @@ import Problem from "@/components/challenge/Problem";
 import Solution from "@/components/solution/solution";
 import WhyPartner from "@/components/whyPartner/whypartner";
 
+
 export default function Home() {
   const [showScroll, setShowScroll] = useState(false);
 
